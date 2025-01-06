@@ -7,86 +7,24 @@
     <link rel="stylesheet" href="/EA/Css/Course1-6.css">
 </head>
 <body>
-    <!-- Хедер -->
-<div class="header">
-    <a href="/index.html">
-        <img src="Assets/Images/logo.png" alt="Логотип Твои Финансы" class="logo">
-    </a>
-    <div class="header-text">Твой гид в мире финансовой грамотности!</div>
-</div>
+    <div class="header">
+        <a href="/EA/Index.html">
+            <img src="/EA/Assets/Images/logo.png" alt="Логотип Твои Финансы" class="logo">
+        </a>
+        <div class="header-text">Твой гид в мире финансовой грамотности!</div>
+    </div>
 
     <div class="container">
         <div class="course-header">
             <h1>Курс 1: Введение в финансы</h1>
             <div class="back-to-courses">
-                <a href="/EA/index.html" class="back-button">Вернуться к выбору курса</a>
+                <a href="/Index.html" class="back-button">Вернуться к выбору курса</a>
             </div>
         </div>
 
         <div class="lessons-container">
             <h2>Выберите урок:</h2>
-            <div class="lessons">
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson1.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson1.jpg" alt="Урок 1">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 1: Введение в финансы</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson2.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson2.jpg" alt="Урок 2">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 2: Основы финансового учета</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson3.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson3.jpg" alt="Урок 3">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 3: Базовые принципы финансового анализа</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson4.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson4.jpg" alt="Урок 4">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 4: Основы учета доходов и расходов</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson5.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson5.jpg" alt="Урок 5">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 5: Структура финансовых отчетов</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="lesson-card">
-                    <a href="/EA/Content/Course1/Lesson6.html" class="lesson-link">
-                        <div class="lesson-preview">
-                            <img src="/EA/Assets/Images/lesson6.jpg" alt="Урок 6">
-                        </div>
-                        <div class="lesson-info">
-                            <span>Урок 6: Роль финансов в современном бизнесе</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <div class="lessons" id="lessons-list"></div>
         </div>
     </div>
 
@@ -96,5 +34,44 @@
         <img src="/EA/Assets/Images/tedo_logo.png" alt="ТеДо" class="partner-logo">
         <img src="/EA/Assets/Images/vshm_spbu_logo.png" alt="ВШМ СПбГУ" class="partner-logo">
     </div>
+
+    <script>
+        // Список уроков для курса 2
+        const lessons = [
+            { number: 1, title: "Введение в финансы", preview: "/EA/Assets/Images/lesson1.jpg" },
+            { number: 2, title: "Основы финансового учета", preview: "/EA/Assets/Images/lesson2.jpg" },
+            { number: 3, title: "Базовые приниципы финансового анализа", preview: "/EA/Assets/Images/lesson3.jpg" },
+            { number: 4, title: "Основы учета доходов и расходов", preview: "/EA/Assets/Images/lesson4.jpg" },
+            { number: 5, title: "Структура финансовых отчетов", preview: "/EA/Assets/Images/lesson5.jpg" },
+            { number: 6, title: "Роль финансов в современном бизнесе", preview: "/EA/Assets/Images/lesson6.jpg" },
+            { number: 7, title: "Введение в финансы", preview: "/EA/Assets/Images/lesson1.jpg" },
+            { number: 8, title: "Основы финансового учета", preview: "/EA/Assets/Images/lesson2.jpg" },
+            { number: 9, title: "Базовые приниципы финансового анализа", preview: "/EA/Assets/Images/lesson3.jpg" },
+            { number: 10, title: "Основы учета доходов и расходов", preview: "/EA/Assets/Images/lesson4.jpg" },
+            { number: 11, title: "Структура финансовых отчетов", preview: "/EA/Assets/Images/lesson5.jpg" },
+            { number: 12, title: "Роль финансов в современном бизнесе", preview: "/EA/Assets/Images/lesson6.jpg" }
+        ];
+
+        const lessonsList = document.getElementById("lessons-list");
+
+        // Добавление карточек уроков на страницу
+        lessons.forEach(lesson => {
+            const lessonCard = document.createElement("div");
+            lessonCard.classList.add("lesson-card");
+
+            lessonCard.innerHTML = `
+                <a href="lesson${lesson.number}.html" class="lesson-link">
+                    <div class="lesson-preview">
+                        <img src="${lesson.preview}" alt="Урок ${lesson.number}">
+                    </div>
+                    <div class="lesson-info">
+                        <span>Урок ${lesson.number}: ${lesson.title}</span>
+                    </div>
+                </a>
+            `;
+
+            lessonsList.appendChild(lessonCard);
+        });
+    </script>
 </body>
 </html>
