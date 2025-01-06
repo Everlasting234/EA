@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курс 1: Введение в финансы</title>
-    <link rel="stylesheet" href="Css/Course1-6.css">
+    <link rel="stylesheet" href="/EA/Css/Course1-6.css">
 </head>
 <body>
     <div class="header">
-        <img src="/Content/Assets/Images/logo.png" alt="Логотип Твои Финансы" class="logo">
+        <img src="/EA/Assets/Images/logo.png" alt="Логотип Твои Финансы" class="logo">
         <div class="header-text">Твой гид в мире финансовой грамотности!</div>
     </div>
 
@@ -16,7 +16,7 @@
         <div class="course-header">
             <h1>Курс 1: Введение в финансы</h1>
             <div class="back-to-courses">
-                <a href="index.html" class="back-button">Вернуться к выбору курса</a>
+                <a href="/EA/index.html" class="back-button">Вернуться к выбору курса</a>
             </div>
         </div>
 
@@ -27,27 +27,27 @@
     </div>
 
     <div class="partners">
-        <img src="Assets/Images/rosmolenodezh_logo.png" alt="Росмолодежь" class="partner-logo">
-        <img src="Assets/Images/vtb_logo.png" alt="ВТБ" class="partner-logo">
-        <img src="Assets/Images/tedo_logo.png" alt="ТеДо" class="partner-logo">
-        <img src="Assets/Images/vshm_spbu_logo.png" alt="ВШМ СПбГУ" class="partner-logo">
+        <img src="/EA/Assets/Images/rosmolenodezh_logo.png" alt="Росмолодежь" class="partner-logo">
+        <img src="/EA/Assets/Images/vtb_logo.png" alt="ВТБ" class="partner-logo">
+        <img src="/EA/Assets/Images/tedo_logo.png" alt="ТеДо" class="partner-logo">
+        <img src="/EA/Assets/Images/vshm_spbu_logo.png" alt="ВШМ СПбГУ" class="partner-logo">
     </div>
 
     <script>
-        // Список уроков для курса 2
+        // Список уроков для курса 1
         const lessons = [
-            { number: 1, title: "Введение в финансы", preview: "Assets/Images/lesson1.jpg" },
-            { number: 2, title: "Основы финансового учета", preview: "Assets/Images/lesson2.jpg" },
-            { number: 3, title: "Базовые приниципы финансового анализа", preview: "Assets/Images/lesson3.jpg" },
-            { number: 4, title: "Основы учета доходов и расходов", preview: "Assets/Images/lesson4.jpg" },
-            { number: 5, title: "Структура финансовых отчетов", preview: "Assets/Images/lesson5.jpg" },
-            { number: 6, title: "Роль финансов в современном бизнесе", preview: "Assets/Images/lesson6.jpg" },
-            { number: 7, title: "Введение в финансы", preview: "Assets/Images/lesson1.jpg" },
-            { number: 8, title: "Основы финансового учета", preview: "Assets/Images/lesson2.jpg" },
-            { number: 9, title: "Базовые приниципы финансового анализа", preview: "Assets/Images/lesson3.jpg" },
-            { number: 10, title: "Основы учета доходов и расходов", preview: "Assets/Images/lesson4.jpg" },
-            { number: 11, title: "Структура финансовых отчетов", preview: "Assets/Images/lesson5.jpg" },
-            { number: 12, title: "Роль финансов в современном бизнесе", preview: "Assets/Images/lesson6.jpg" }
+            { number: 1, title: "Введение в финансы", preview: "/EA/Assets/Images/lesson1.jpg" },
+            { number: 2, title: "Основы финансового учета", preview: "/EA/Assets/Images/lesson2.jpg" },
+            { number: 3, title: "Базовые приниципы финансового анализа", preview: "/EA/Assets/Images/lesson3.jpg" },
+            { number: 4, title: "Основы учета доходов и расходов", preview: "/EA/Assets/Images/lesson4.jpg" },
+            { number: 5, title: "Структура финансовых отчетов", preview: "/EA/Assets/Images/lesson5.jpg" },
+            { number: 6, title: "Роль финансов в современном бизнесе", preview: "/EA/Assets/Images/lesson6.jpg" },
+            { number: 7, title: "Введение в финансы", preview: "/EA/Assets/Images/lesson1.jpg" },
+            { number: 8, title: "Основы финансового учета", preview: "/EA/Assets/Images/lesson2.jpg" },
+            { number: 9, title: "Базовые приниципы финансового анализа", preview: "/EA/Assets/Images/lesson3.jpg" },
+            { number: 10, title: "Основы учета доходов и расходов", preview: "/EA/Assets/Images/lesson4.jpg" },
+            { number: 11, title: "Структура финансовых отчетов", preview: "/EA/Assets/Images/lesson5.jpg" },
+            { number: 12, title: "Роль финансов в современном бизнесе", preview: "/EA/Assets/Images/lesson6.jpg" }
         ];
 
         const lessonsList = document.getElementById("lessons-list");
@@ -58,7 +58,7 @@
             lessonCard.classList.add("lesson-card");
 
             lessonCard.innerHTML = `
-                <a href="lesson${lesson.number}.html" class="lesson-link">
+                <a href="/EA/lesson${lesson.number}.html" class="lesson-link">
                     <div class="lesson-preview">
                         <img src="${lesson.preview}" alt="Урок ${lesson.number}">
                     </div>
