@@ -11,7 +11,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-    text-align: center; /* Центрирование содержимого */
 }
 
 /* Хедер */
@@ -19,107 +18,72 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 15px;
     border-bottom: 3px solid #d32b28;
     margin-bottom: 25px;
-    flex-wrap: wrap; /* Позволяет перенос элементов на мобильных устройствах */
+    flex-wrap: wrap; /* Для переноса текста на узких экранах */
 }
 
 .logo {
-    width: 130px;
-    height: auto;
-    margin-right: 20px; /* Добавляем отступ между логотипом и текстом */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.1); /* Анимация увеличения */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    flex-shrink: 0; /* Логотип не сжимается */
 }
 
 .header-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #000000;
-    text-align: left; /* Оставляем текст выровненным по левому краю */
-    flex: 1; /* Занимаем оставшееся пространство */
+    margin-left: 15px; /* Расстояние между логотипом и текстом */
+    flex-grow: 1; /* Текст занимает оставшееся место */
+    text-align: left;
 }
 
 /* Логотипы партнеров */
 .partners {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Логотипы переходят на новую строку при необходимости */
-    gap: 20px; /* Промежутки между логотипами */
+    gap: 20px; /* Расстояние между логотипами */
+    flex-wrap: wrap; /* Логотипы переносятся на новую строку при нехватке места */
     margin-top: 35px;
-    padding-top: 25px;
+    padding: 10px;
     border-top: 3px solid #d32b28;
 }
 
 .partner-logo {
-    width: 80px; /* Уменьшаем размер логотипов */
+    width: 80px;
     height: auto;
     object-fit: contain;
 }
 
 /* Попап */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.popup.active {
-    opacity: 1;
-    visibility: visible;
-}
-
 .popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 800px;
-    display: flex;
     flex-direction: column; /* Вертикальная структура */
-    align-items: center;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Центрируем текст */
+    padding: 15px;
+    max-width: 90%; /* Уменьшаем ширину */
+    text-align: center; /* Выравнивание текста */
+}
+
+.popup-header {
+    display: flex;
+    justify-content: center; /* Центрируем иконку */
+    margin-bottom: 15px;
 }
 
 .popup-header img {
-    width: auto;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 20px; /* Отступ между изображением и текстом */
+    height: 150px; /* Уменьшаем изображение */
 }
 
 .popup-text {
-    font-size: 1rem;
-    text-align: center; /* Текст в центре */
+    font-size: 0.9rem;
     margin-bottom: 20px;
 }
 
 .popup-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 300px;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
 }
 
 .popup-controls button {
@@ -128,18 +92,18 @@ body {
     font-size: 2rem;
     cursor: pointer;
     color: #000;
+    margin: 0 10px;
 }
 
 .popup-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    position: relative;
+    margin-top: 10px;
 }
 
 .popup-indicators span {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     margin: 0 5px;
     background: gray;
     border-radius: 50%;
@@ -149,47 +113,76 @@ body {
     background: #d32b28;
 }
 
-/* Медиа-запросы */
+/* Медиа-запросы для экранов до 768px */
 @media screen and (max-width: 768px) {
     .header {
-        flex-direction: column; /* Логотип и текст на одной линии */
+        flex-direction: row; /* Текст и логотип остаются в строку */
         align-items: center;
-        text-align: center;
-    }
-
-    .logo {
-        width: 100px;
     }
 
     .header-text {
-        font-size: 1.2rem;
-        margin-top: 10px;
+        font-size: 1rem;
+        text-align: left;
     }
 
     .partners {
-        gap: 15px;
+        gap: 15px; /* Уменьшаем расстояние между логотипами */
     }
 
     .partner-logo {
         width: 70px;
     }
 
+    .popup-header img {
+        height: 120px; /* Уменьшаем изображение в попапе */
+    }
+
     .popup-content {
-        padding: 15px;
-        width: 90%;
+        max-width: 95%;
+    }
+
+    .popup-controls button {
+        font-size: 1.5rem;
+    }
+
+    .popup-indicators span {
+        width: 8px;
+        height: 8px;
     }
 }
 
+/* Медиа-запросы для экранов до 480px */
 @media screen and (max-width: 480px) {
-    .header-text {
-        font-size: 1rem;
+    .header {
+        flex-direction: column; /* Логотип и текст друг под другом */
+        align-items: center;
+        padding: 10px;
     }
 
-    .popup-content {
-        width: 95%;
+    .header-text {
+        font-size: 1rem;
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+
+    .partners {
+        gap: 10px;
     }
 
     .partner-logo {
         width: 60px;
+    }
+
+    .popup-header img {
+        height: 100px;
+    }
+
+    .popup-controls button {
+        font-size: 1.2rem;
+    }
+
+    .popup-indicators span {
+        width: 6px;
+        height: 6px;
     }
 }
