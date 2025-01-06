@@ -36,6 +36,18 @@ body {
     color: #000000;
 }
 
+/* Логотип */
+.logo {
+    width: 130px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Увеличиваем логотип на 10% */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
 /* Основной контейнер */
 .container {
     max-width: 1200px;

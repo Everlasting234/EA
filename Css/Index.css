@@ -11,6 +11,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+    text-align: center; /* Центрирование содержимого */
 }
 
 /* Хедер */
@@ -21,140 +22,47 @@ body {
     padding: 10px 30px;
     border-bottom: 3px solid #d32b28;
     margin-bottom: 25px;
+    flex-wrap: wrap; /* Позволяет перенос элементов на мобильных устройствах */
 }
 
 .logo {
     width: 130px;
     height: auto;
-}
-
-/* Логотип */
-.logo {
-    width: 130px;
-    height: auto;
+    margin-right: 20px; /* Добавляем отступ между логотипом и текстом */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Увеличиваем логотип на 10% */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    transform: scale(1.1); /* Анимация увеличения */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header-text {
     font-size: 1.5rem;
     font-weight: 600;
     color: #000000;
-}
-
-/* Блоки с курсами */
-.course-blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.course {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #000000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.course:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f7aa9a;
-}
-
-.course:active {
-    transform: translateY(-3px);
-}
-
-/* Подсказки внутри блоков */
-.tooltip {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-
-.course:hover .tooltip {
-    display: block;
-    opacity: 1;
-}
-
-.tooltip-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #f39c12;
-    z-index: 5;
-    transition: color 0.3s ease;
-}
-
-/* Стили для блока магистратуры */
-.magister {
-    background-color: #d32b28;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
-    margin-top: 35px;
-}
-
-.magister:hover {
-    background-color: #233468;
-    transform: translateY(-8px);
-}
-
-.magister-link {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Сохраняем цвет родительского элемента */
+    text-align: left; /* Оставляем текст выровненным по левому краю */
+    flex: 1; /* Занимаем оставшееся пространство */
 }
 
 /* Логотипы партнеров */
 .partners {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    flex-wrap: wrap; /* Логотипы переходят на новую строку при необходимости */
+    gap: 20px; /* Промежутки между логотипами */
     margin-top: 35px;
     padding-top: 25px;
     border-top: 3px solid #d32b28;
 }
 
 .partner-logo {
-    width: 120px;
+    width: 80px; /* Уменьшаем размер логотипов */
     height: auto;
     object-fit: contain;
 }
 
-/* Стили для попапа */
+/* Попап */
 .popup {
     position: fixed;
     top: 0;
@@ -183,58 +91,50 @@ body {
     width: 80%;
     max-width: 800px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Вертикальная структура */
     align-items: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.popup-header {
-    margin-right: 20px;
+    text-align: center; /* Центрируем текст */
 }
 
 .popup-header img {
     width: auto;
-    height: 200px;
+    height: 150px;
     object-fit: contain;
+    margin-bottom: 20px; /* Отступ между изображением и текстом */
 }
 
 .popup-text {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
     font-size: 1rem;
+    text-align: center; /* Текст в центре */
+    margin-bottom: 20px;
 }
 
 .popup-controls {
     position: absolute;
-    bottom: 275px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 300px;
 }
 
 .popup-controls button {
     background: none;
     border: none;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #000;
-    margin: 0 15px;
 }
 
 .popup-indicators {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    position: absolute;
-    bottom: 265px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 }
 
 .popup-indicators span {
@@ -249,43 +149,12 @@ body {
     background: #d32b28;
 }
 
-.popup-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
-    color: #000;
-}
-
 /* Медиа-запросы */
-/* Медиа-запросы для экранов до 768px */
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .course-blocks {
-        grid-template-columns: 1fr; /* Один блок в строке */
-        gap: 15px;
-    }
-
-    .course {
-        padding: 20px;
-        font-size: 1rem;
-    }
-
-    .tooltip {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
     .header {
-        flex-direction: column; /* Ставим элементы хедера друг под друга */
-        align-items: flex-start;
-        padding: 10px 15px;
+        flex-direction: column; /* Логотип и текст на одной линии */
+        align-items: center;
+        text-align: center;
     }
 
     .logo {
@@ -294,74 +163,33 @@ body {
 
     .header-text {
         font-size: 1.2rem;
-        text-align: center;
         margin-top: 10px;
     }
 
-    .popup-content {
-        flex-direction: column; /* Вертикальная структура */
-        padding: 15px;
-        max-width: 90%; /* Уменьшаем ширину */
-    }
-
-    .popup-header img {
-        height: 150px; /* Уменьшаем изображение */
-    }
-
-    .popup-text {
-        font-size: 0.9rem;
-        text-align: center;
+    .partners {
+        gap: 15px;
     }
 
     .partner-logo {
-        width: 90px; /* Уменьшаем логотипы партнеров */
+        width: 70px;
+    }
+
+    .popup-content {
+        padding: 15px;
+        width: 90%;
     }
 }
 
-/* Медиа-запросы для экранов до 480px */
 @media screen and (max-width: 480px) {
-    .container {
-        padding: 5px;
-    }
-
-    .course {
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-
-    .course-blocks {
-        grid-template-columns: 1fr; /* Один блок в строке */
-    }
-
-    .tooltip {
-        font-size: 0.8rem;
-        padding: 8px;
-    }
-
     .header-text {
         font-size: 1rem;
-        text-align: center;
     }
 
     .popup-content {
-        padding: 10px;
-        max-width: 95%;
-        max-height: 90vh; /* Уменьшаем высоту */
-    }
-
-    .popup-header img {
-        height: 120px; /* Уменьшаем изображение в попапе */
-    }
-
-    .popup-text {
-        font-size: 0.8rem;
-    }
-
-    .popup-close {
-        font-size: 2rem;
+        width: 95%;
     }
 
     .partner-logo {
-        width: 70px; /* Еще больше уменьшаем логотипы партнеров */
+        width: 60px;
     }
 }
