@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 1: Введение в финансы</title>
+    <link rel="stylesheet" href="C:\Users\eeeve\Desktop\ea\Css\Lessons.css">
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\eeeve\Desktop\ea\Assets\Images\logo.png" alt="Логотип Твои Финансы" class="logo">
+        <div class="header-text">Твой гид в мире финансовой грамотности!</div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="video-wrapper">
+                <video id="main-video" controls>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+
+            <div class="video-title-container">
+                <h2 class="video-title">Урок 1. Введение в финансы</h2>
+            </div>
+
+            <div class="controls">
+                <button id="testButton" onclick="toggleTest()">Пройти тест</button>
+                <button onclick="window.location.href='C:/Users/eeeve/Desktop/ea/Index.html'">Вернуться к выбору курса</button>
+            </div>
+            
+            <div class="description">
+                <h3>Описание урока:</h3>
+                <p>Этот урок познакомит вас с основами финансов и их значением в повседневной жизни. Мы рассмотрим, как финансовая грамотность влияет на личные финансы и успешное планирование бюджета.</p>
+            </div>
+
+            <div id="test">
+                <h3>Тест по материалам урока</h3>
+                <div id="test-result"></div>
+                <div id="question-container">
+                    <div class="question">
+                        <p>1. Что такое финансовая грамотность?</p>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Знание основ математики</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="true">Умение управлять личными финансами</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Ведение сложных расчетов</div>
+                    </div>
+                    <div class="question">
+                        <p>2. Какова цель планирования бюджета?</p>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="true">Контроль доходов и расходов</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Накопление денег</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Избегание налогов</div>
+                    </div>
+                    <div class="question">
+                        <p>3. Что необходимо для успешного финансового планирования?</p>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="true">Записывать расходы</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Избегать кредитов</div>
+                        <div class="answer" onclick="selectAnswer(this)" data-correct="false">Покупать акции</div>
+                    </div>
+                </div>
+                <div class="result-btns">
+                    <button class="result-btn" onclick="showResults()">Узнать результат</button>
+                    <button class="result-btn" onclick="resetTest()">Пройти заново</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h3>Другие уроки курса</h3>
+            <div class="recommendation">
+                <video muted>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                </video>
+                <div class="recommendation-title">Урок 2: Основы инвестиций</div>
+            </div>
+            <div class="recommendation">
+                <video muted>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                </video>
+                <div class="recommendation-title">Урок 3: Управление личными финансами</div>
+            </div>
+            <div class="recommendation">
+                <video muted>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                </video>
+                <div class="recommendation-title">Урок 4: Бюджетирование</div>
+            </div>
+            <div class="recommendation">
+                <video muted>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                </video>
+                <div class="recommendation-title">Урок 5: Инвестиционные стратегии</div>
+            </div>
+            <div class="recommendation">
+                <video muted>
+                    <source src="C:\Users\eeeve\Desktop\ea\Assets\Videos\video1.mp4" type="video/mp4">
+                </video>
+                <div class="recommendation-title">Урок 6: Риски в финансах</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="partners">
+        <img src="C:\Users\eeeve\Desktop\ea\Assets\Images\rosmolodezh_logo.png" alt="Росмолодежь" class="partner-logo">
+        <img src="C:\Users\eeeve\Desktop\ea\Assets\Images\vtb_logo.png" alt="ВТБ" class="partner-logo">
+        <img src="C:\Users\eeeve\Desktop\ea\Assets\Images\tedo_logo.png" alt="ТеДо" class="partner-logo">
+        <img src="C:\Users\eeeve\Desktop\ea\Assets\Images\vshm_spbu_logo.png" alt="ВШМ СПбГУ" class="partner-logo">
+    </div>
+
+    <script src="C:\Users\eeeve\Desktop\ea\Js\Lessons.js"></script>
+</body>
+</html>

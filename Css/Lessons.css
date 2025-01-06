@@ -1,0 +1,447 @@
+/* Lessons.css */
+
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Хедер */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 2px solid #d32b28;
+    margin-bottom: 20px;
+    background: #ffffff00;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.header-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Логотипы партнеров */
+.partners {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+    padding: 25px 0;
+    border-top: 3px solid #d32b28;
+    background: #ffffff00;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.partner-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Остальные стили */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Остальной CSS-код */
+/* Остальные стили */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Видео стили */
+.video-wrapper {
+    width: 100%;
+    margin-bottom: -5px;
+    position: relative;
+}
+
+.video-title-container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.video-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Контролы */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.controls button {
+    flex: 1;
+    padding: 12px 20px;
+    background: #d32b28; /* Красный цвет */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #b71c1c; /* Более темный красный */
+}
+
+/* Описание */
+.description {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.description h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Тестовый блок */
+#test {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#test h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+#test-result {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.result.green {
+    color: #27ae60;
+}
+
+.result.orange {
+    color: #f39c12;
+}
+
+.result.red {
+    color: #c0392b;
+}
+
+.question {
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.answer {
+    padding: 15px;
+    background: #eaeaea;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer:hover {
+    background-color: #d0d0d0;
+    transform: translateX(5px);
+}
+
+.answer.selected {
+    background-color: #d32b28; /* Красный цвет */
+    color: #fff;
+}
+
+.result-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.result-btn {
+    flex: 1;
+    padding: 12px 20px;
+    background: #d32b28; /* Красный цвет */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.result-btn:hover {
+    background: #b71c1c; /* Более темный красный */
+}
+
+/* Рекомендации */
+.recommendations {
+    flex: 1;
+    max-height: calc(100vh - -60px);
+    overflow-y: auto;
+    padding: 0 15px;
+    background: #fafafa;
+    border-left: 2px solid #eee;
+}
+
+.recommendations h3 {
+    position: sticky;
+    top: 0;
+    background: #fafafa;
+    padding: 15px 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.recommendation {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.recommendation:hover {
+    transform: translateY(-5px);
+}
+
+.recommendation video {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.recommendation-title {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Стили для названия видео */
+.video-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+
+/* Скроллбар */
+.recommendations::-webkit-scrollbar {
+    width: 8px;
+}
+
+.recommendations::-webkit-scrollbar-thumb {
+    background: #d32b28; /* Красный цвет */
+    border-radius: 4px;
+}
+
+.recommendations::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    .main-content {
+        flex: auto;
+    }
+
+    .video-title-container {
+        background: #fff;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .video-title {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        background: #fff;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .controls {
+        margin: 10px;
+    }
+
+    #test {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #test h3 {
+        font-size: 1.2rem;
+    }
+
+    #test-result {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .question {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .answer {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .result-btns {
+        margin-top: 10px;
+    }
+
+    .recommendations {
+        max-height: none;
+        overflow-y: visible;
+        padding: 10px;
+        background: #fff;
+        border-left: none;
+        margin-top: 20px;
+    }
+
+    .recommendations h3 {
+        position: static;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .recommendation {
+        display: flex;
+        align-items: center;
+        background: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+    }
+
+    .recommendation:hover {
+        transform: translateX(5px);
+    }
+
+    .recommendation video {
+        width: 120px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    .recommendation-title {
+        font-size: 1rem;
+    }
+}
