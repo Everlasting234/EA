@@ -18,7 +18,7 @@
         <div class="course-header">
             <h1>Курс 1: Введение в финансы</h1>
             <div class="back-to-courses">
-                <a href="/Index.html" class="back-button">Вернуться к выбору курса</a>
+                <a href="/index.html" class="back-button">Вернуться к выбору курса</a>
             </div>
         </div>
 
@@ -54,24 +54,18 @@
 
         const lessonsList = document.getElementById("lessons-list");
 
-        // Добавление карточек уроков на страницу
-        lessons.forEach(lesson => {
-            const lessonCard = document.createElement("div");
-            lessonCard.classList.add("lesson-card");
-
-            lessonCard.innerHTML = `
-                <a href="lesson${lesson.number}.html" class="lesson-link">
-                    <div class="lesson-preview">
-                        <img src="${lesson.preview}" alt="Урок ${lesson.number}">
-                    </div>
-                    <div class="lesson-info">
-                        <span>Урок ${lesson.number}: ${lesson.title}</span>
-                    </div>
-                </a>
-            `;
-
-            lessonsList.appendChild(lessonCard);
-        });
+        <div class="lessons-container">
+            <h2>Выберите урок:</h2>
+            <ul class="lessons-list">
+                <li><a href="/EA/Content/Course1/Lesson1.html">Урок 1: Введение в финансы</a></li>
+                <li><a href="/EA/Content/Course1/lesson2.html">Урок 2: Основы финансового учета</a></li>
+                <li><a href="/EA/Content/Course1/lesson3.html">Урок 3: Базовые принципы финансового анализа</a></li>
+                <li><a href="/EA/Content/Course1/lesson4.html">Урок 4: Основы учета доходов и расходов</a></li>
+                <li><a href="/EA/Content/Course1/lesson5.html">Урок 5: Структура финансовых отчетов</a></li>
+                <li><a href="/EA/Content/Course1/lesson6.html">Урок 6: Роль финансов в современном бизнесе</a></li>
+            </ul>
+        </div>
+   
     </script>
 </body>
 </html>
