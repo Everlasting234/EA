@@ -249,17 +249,19 @@ body {
 }
 
 /* Медиа-запросы */
+/* Медиа-запросы для экранов до 768px */
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px;
     }
 
     .course-blocks {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; /* Один блок в строке */
+        gap: 15px;
     }
 
     .course {
-        padding: 15px;
+        padding: 20px;
         font-size: 1rem;
     }
 
@@ -268,14 +270,55 @@ body {
         padding: 10px;
     }
 
+    .header {
+        flex-direction: column; /* Ставим элементы хедера друг под друга */
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
     .header-text {
         font-size: 1.2rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .popup-content {
+        flex-direction: column; /* Вертикальная структура */
+        padding: 15px;
+        max-width: 90%; /* Уменьшаем ширину */
+    }
+
+    .popup-header img {
+        height: 150px; /* Уменьшаем изображение */
+    }
+
+    .popup-text {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .partner-logo {
+        width: 90px; /* Уменьшаем логотипы партнеров */
     }
 }
 
+/* Медиа-запросы для экранов до 480px */
 @media screen and (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
     .course {
         font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .course-blocks {
+        grid-template-columns: 1fr; /* Один блок в строке */
     }
 
     .tooltip {
@@ -285,5 +328,28 @@ body {
 
     .header-text {
         font-size: 1rem;
+        text-align: center;
+    }
+
+    .popup-content {
+        padding: 10px;
+        max-width: 95%;
+        max-height: 90vh; /* Уменьшаем высоту */
+    }
+
+    .popup-header img {
+        height: 120px; /* Уменьшаем изображение в попапе */
+    }
+
+    .popup-text {
+        font-size: 0.8rem;
+    }
+
+    .popup-close {
+        font-size: 2rem;
+    }
+
+    .partner-logo {
+        width: 70px; /* Еще больше уменьшаем логотипы партнеров */
     }
 }
