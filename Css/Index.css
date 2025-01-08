@@ -256,7 +256,7 @@ body {
     }
 
     .course {
-        padding: 20px; /* Исправление 4: Увеличение отступов внутри блоков курсов */
+        padding: 15px;
         font-size: 1rem;
     }
 
@@ -269,17 +269,44 @@ body {
         font-size: 1.2rem;
     }
 
-    .tooltip-icon {
-        font-size: 1.2rem; /* Исправление 4: Уменьшение размера иконки подсказки */
-        top: 5px; /* Исправление 4: Корректировка позиционирования иконки подсказки */
-        right: 5px; /* Исправление 4: Корректировка позиционирования иконки подсказки */
+    /* Изменения для попапа */
+    .popup-content {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .popup-header img {
+        height: 100px;
+    }
+
+    .popup-text {
+        font-size: 0.9rem;
+    }
+
+    .popup-controls {
+        bottom: 20px;
+    }
+
+    .popup-indicators {
+        bottom: 10px;
+    }
+
+    /* Изменения для логотипов партнеров */
+    .partners {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .partner-logo {
+        width: 80px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .course {
         font-size: 0.9rem;
-        padding: 15px; /* Исправление 4: Корректировка отступов внутри блоков курсов */
     }
 
     .tooltip {
@@ -291,7 +318,29 @@ body {
         font-size: 1rem;
     }
 
-    .tooltip-icon {
-        font-size: 1rem; /* Исправление 4: Дальнейшее уменьшение размера иконки подсказки */
+    /* Изменения для попапа */
+    .popup-content {
+        padding: 15px;
+    }
+
+    .popup-header img {
+        height: 80px;
+    }
+
+    .popup-text {
+        font-size: 0.8rem;
+    }
+
+    .popup-controls button {
+        font-size: 1.5rem;
+    }
+
+    .popup-close {
+        font-size: 1.5rem;
+    }
+
+    /* Изменения для логотипов партнеров */
+    .partner-logo {
+        width: 60px;
     }
 }
