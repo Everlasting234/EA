@@ -131,15 +131,14 @@ body {
 .partners {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Исправление 5: Перенос логотипов на новую строку */
-    gap: 20px; /* Исправление 5: Уменьшение расстояния между логотипами */
+    gap: 40px;
     margin-top: 35px;
     padding-top: 25px;
     border-top: 3px solid #d32b28;
 }
 
 .partner-logo {
-    width: 100px; /* Исправление 5: Уменьшение размера логотипов */
+    width: 120px;
     height: auto;
     object-fit: contain;
 }
@@ -170,61 +169,66 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 90%; /* Исправление 2: Увеличение ширины попапа */
+    width: 80%;
     max-width: 800px;
     display: flex;
-    flex-direction: column; /* Исправление 2: Изменение направления flex */
+    flex-direction: row;
     align-items: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .popup-header {
-    margin-bottom: 20px; /* Исправление 2: Добавление отступа снизу */
+    margin-right: 20px;
 }
 
 .popup-header img {
     width: auto;
-    height: 150px; /* Исправление 2: Уменьшение высоты изображения */
+    height: 200px;
     object-fit: contain;
 }
 
 .popup-text {
     flex: 1;
     display: flex;
-    justify-content: center; /* Исправление 2: Центрирование текста */
+    justify-content: flex-start;
     align-items: center;
-    text-align: center; /* Исправление 2: Центрирование текста */
+    text-align: left;
     font-size: 1rem;
 }
 
 .popup-controls {
-    position: static; /* Исправление 3: Удаление абсолютного позиционирования */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px; /* Исправление 3: Добавление отступа сверху */
 }
 
 .popup-controls button {
     background: none;
     border: none;
-    font-size: 2rem; /* Исправление 3: Уменьшение размера кнопок */
+    font-size: 3rem;
     cursor: pointer;
     color: #000;
-    margin: 0 10px; /* Исправление 3: Уменьшение отступов по бокам */
+    margin: 0 15px;
 }
 
 .popup-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Исправление 3: Уменьшение отступа сверху */
-    position: static; /* Исправление 3: Удаление абсолютного позиционирования */
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .popup-indicators span {
-    width: 10px; /* Исправление 3: Уменьшение ширины индикаторов */
-    height: 10px; /* Исправление 3: Уменьшение высоты индикаторов */
+    width: 12px;
+    height: 12px;
     margin: 0 5px;
     background: gray;
     border-radius: 50%;
@@ -240,23 +244,19 @@ body {
     right: 10px;
     background: none;
     border: none;
-    font-size: 2rem; /* Исправление 3: Уменьшение размера кнопки закрытия */
+    font-size: 3rem;
     cursor: pointer;
     color: #000;
 }
 
 /* Медиа-запросы */
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
     .course-blocks {
         grid-template-columns: 1fr;
     }
 
     .course {
-        padding: 15px;
+        padding: 20px;
         font-size: 1rem;
     }
 
@@ -271,17 +271,23 @@ body {
 
     /* Изменения для попапа */
     .popup-content {
+        flex-direction: column;
         width: 90%;
         max-width: 400px;
-        padding: 20px;
+        padding: 40px 20px;
+    }
+
+    .popup-header {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
     .popup-header img {
-        height: 100px;
+        height: 150px;
     }
 
     .popup-text {
-        font-size: 0.9rem;
+        text-align: center;
     }
 
     .popup-controls {
@@ -295,18 +301,19 @@ body {
     /* Изменения для логотипов партнеров */
     .partners {
         flex-wrap: wrap;
-        justify-content: center;
         gap: 20px;
     }
 
     .partner-logo {
-        width: 80px;
+        width: calc(50% - 20px);
+        max-width: 100px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .course {
         font-size: 0.9rem;
+        padding: 15px;
     }
 
     .tooltip {
@@ -320,27 +327,28 @@ body {
 
     /* Изменения для попапа */
     .popup-content {
-        padding: 15px;
+        padding: 30px 15px;
     }
 
     .popup-header img {
-        height: 80px;
+        height: 120px;
     }
 
     .popup-text {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .popup-controls button {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .popup-close {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     /* Изменения для логотипов партнеров */
     .partner-logo {
-        width: 60px;
+        width: calc(50% - 10px);
+        max-width: 80px;
     }
 }
