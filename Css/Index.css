@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f7f7f7;
     color: #000000;
-    overflow-x: hidden; /* Исправление 1: Предотвращение прокрутки вправо */
 }
 
 .container {
@@ -131,15 +130,14 @@ body {
 .partners {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Исправление 5: Перенос логотипов на новую строку */
-    gap: 20px; /* Исправление 5: Уменьшение расстояния между логотипами */
+    gap: 40px;
     margin-top: 35px;
     padding-top: 25px;
     border-top: 3px solid #d32b28;
 }
 
 .partner-logo {
-    width: 100px; /* Исправление 5: Уменьшение размера логотипов */
+    width: 120px;
     height: auto;
     object-fit: contain;
 }
@@ -170,61 +168,66 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 90%; /* Исправление 2: Увеличение ширины попапа */
+    width: 80%;
     max-width: 800px;
     display: flex;
-    flex-direction: column; /* Исправление 2: Изменение направления flex */
+    flex-direction: row;
     align-items: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .popup-header {
-    margin-bottom: 20px; /* Исправление 2: Добавление отступа снизу */
+    margin-right: 20px;
 }
 
 .popup-header img {
     width: auto;
-    height: 150px; /* Исправление 2: Уменьшение высоты изображения */
+    height: 200px;
     object-fit: contain;
 }
 
 .popup-text {
     flex: 1;
     display: flex;
-    justify-content: center; /* Исправление 2: Центрирование текста */
+    justify-content: flex-start;
     align-items: center;
-    text-align: center; /* Исправление 2: Центрирование текста */
+    text-align: left;
     font-size: 1rem;
 }
 
 .popup-controls {
-    position: static; /* Исправление 3: Удаление абсолютного позиционирования */
+    position: absolute;
+    bottom: 275px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px; /* Исправление 3: Добавление отступа сверху */
 }
 
 .popup-controls button {
     background: none;
     border: none;
-    font-size: 2rem; /* Исправление 3: Уменьшение размера кнопок */
+    font-size: 3rem;
     cursor: pointer;
     color: #000;
-    margin: 0 10px; /* Исправление 3: Уменьшение отступов по бокам */
+    margin: 0 15px;
 }
 
 .popup-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Исправление 3: Уменьшение отступа сверху */
-    position: static; /* Исправление 3: Удаление абсолютного позиционирования */
+    margin-top: 20px;
+    position: absolute;
+    bottom: 265px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .popup-indicators span {
-    width: 10px; /* Исправление 3: Уменьшение ширины индикаторов */
-    height: 10px; /* Исправление 3: Уменьшение высоты индикаторов */
+    width: 12px;
+    height: 12px;
     margin: 0 5px;
     background: gray;
     border-radius: 50%;
@@ -240,7 +243,7 @@ body {
     right: 10px;
     background: none;
     border: none;
-    font-size: 2rem; /* Исправление 3: Уменьшение размера кнопки закрытия */
+    font-size: 3rem;
     cursor: pointer;
     color: #000;
 }
@@ -252,11 +255,11 @@ body {
     }
 
     .course-blocks {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .course {
-        padding: 20px; /* Исправление 4: Увеличение отступов внутри блоков курсов */
+        padding: 15px;
         font-size: 1rem;
     }
 
@@ -268,18 +271,11 @@ body {
     .header-text {
         font-size: 1.2rem;
     }
-
-    .tooltip-icon {
-        font-size: 1.2rem; /* Исправление 4: Уменьшение размера иконки подсказки */
-        top: 5px; /* Исправление 4: Корректировка позиционирования иконки подсказки */
-        right: 5px; /* Исправление 4: Корректировка позиционирования иконки подсказки */
-    }
 }
 
 @media screen and (max-width: 480px) {
     .course {
         font-size: 0.9rem;
-        padding: 15px; /* Исправление 4: Корректировка отступов внутри блоков курсов */
     }
 
     .tooltip {
@@ -289,9 +285,5 @@ body {
 
     .header-text {
         font-size: 1rem;
-    }
-
-    .tooltip-icon {
-        font-size: 1rem; /* Исправление 4: Дальнейшее уменьшение размера иконки подсказки */
     }
 }
